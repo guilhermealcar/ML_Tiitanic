@@ -39,11 +39,12 @@ X_teste = df_teste.drop(['PassengerId', 'Name', 'Ticket', 'Cabin'], axis=1)
 clf_arvore = tree.DecisionTreeClassifier()
 clf_arvore = clf_arvore.fit(X_treino, y_treino)
 
+#Plota a árvore de decisão
+tree.plot_tree(clf)
+
 #Calcula a acuracia do modelo
 acuracia_arvore = clf_arvore.score(X_treino, y_treino)
 print('Acuracia da arvore:', round(acuracia_arvore * 100, 2))
-
-#tree.plot_tree(clf)
 
 #### Perceptron ####
 #Cria o perceptron
