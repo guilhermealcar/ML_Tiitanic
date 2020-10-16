@@ -40,7 +40,7 @@ clf_arvore = tree.DecisionTreeClassifier()
 clf_arvore = clf_arvore.fit(X_treino, y_treino)
 
 #Plota a árvore de decisão
-tree.plot_tree(clf)
+tree.plot_tree(clf_arvore)
 
 #Calcula a acuracia do modelo
 acuracia_arvore = clf_arvore.score(X_treino, y_treino)
